@@ -9,16 +9,15 @@ L.SimpleGraticule = L.LayerGroup.extend({
         showOriginLabel: true,
         redraw: 'move',
         hidden: false,
-        zoomIntervals : []
-    },
-
-    lineStyle: {
-        stroke: true,
-        color: '#111',
-        opacity: 0.6,
-        weight: 1,
-        interactive: false,
-        clickable: false //legacy support
+        zoomIntervals : [],
+        lineStyle: {
+          stroke: true,
+          color: '#111',
+          opacity: 0.6,
+          weight: 1,
+          interactive: false,
+          clickable: false //legacy support
+        }
     },
 
     initialize: function(options) {
@@ -120,14 +119,14 @@ L.SimpleGraticule = L.LayerGroup.extend({
         var bottomLL = new L.LatLng(this._bounds.getSouth(), x);
         var topLL = new L.LatLng(this._bounds.getNorth(), x);
 
-        return new L.Polyline([bottomLL, topLL], this.lineStyle);
+        return new L.Polyline([bottomLL, topLL], this.options.lineStyle);
     },
 
     buildYLine: function(y) {
         var leftLL = new L.LatLng(y, this._bounds.getWest());
         var rightLL = new L.LatLng(y, this._bounds.getEast());
 
-        return new L.Polyline([leftLL, rightLL], this.lineStyle);
+        return new L.Polyline([leftLL, rightLL], this.options.lineStyle);
     },
 
     buildLabel: function(axis, val) {
