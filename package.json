@@ -1,0 +1,19 @@
+{
+  "name": "leaflet.simplegraticule",
+  "homepage": "https://github.com/ablakey/Leaflet.SimpleGraticule",
+  "version": "1.0.0",
+  "license": "BSD-2-Clause",
+  "main": [
+    "L.SimpleGraticule.css",
+    "L.SimpleGraticule.js"
+  ],
+  "dependencies": {
+    "leaflet": "^1.0.3"
+  },
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "components"
+  ]
+}
+
